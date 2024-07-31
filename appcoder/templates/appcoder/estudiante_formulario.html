@@ -1,0 +1,14 @@
+{%extends 'appcoder/base.html'%}
+{%load static  %}
+{%block title%} Formulario - agregar estudiante {%endblock title%}
+{%block main%}
+
+    <form action="/estudiante-formulario/" method="POST">
+        {%csrf_token%}
+        <p>estudiante:<input type="text" name="curso"></p>
+        <p>contraseña:<input type="text" name="curso"></p>
+        
+        <input type="submit" value="Enviar">
+
+    </form>
+{%endblock main%}

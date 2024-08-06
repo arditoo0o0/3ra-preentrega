@@ -12,9 +12,8 @@ class Estudiante(models.Model):
     
 class Profesor(models.Model):
     nombre=models.CharField(max_length=40)
-    apellido=models.CharField(max_length=40)
-    email=models.EmailField()
-    profesion=models.CharField(max_length=40)
+    contraseña=models.CharField(max_length=40)
+    
     
 class Entregable(models.Model):
     nombre=models.CharField(max_length=30)

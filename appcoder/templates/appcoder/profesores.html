@@ -1,0 +1,23 @@
+{% extends "appcoder/Estudianteformulario.html" %}
+
+{% block contenido_que_cambia %}
+
+<style>
+    .centrado {
+        width: 50%; 
+        margin: 0 auto; 
+        padding: 160px;
+    }
+    .mascentrado {
+        width: 90%; 
+        margin: 25px auto;
+    }
+</style>
+
+<form class="centrado" action="{% url 'profesores_log' %}" method="POST">
+    {% csrf_token %}
+    <p>Profesores: <input type="text" name="profesores"></p>
+    <p>Contraseña: <input type="text" name="contraseña"></p>
+    <input class="mascentrado" type="submit" value="Enviar">
+</form>
+{% endblock %}

@@ -36,4 +36,16 @@ def RegistroEstudiante(request):
     
     return render(request, "appcoder/RegistroEstudiante.html")
 
+def busquedaestudiante(request):
+    return render(request , "appcoder/busquedaestudiante.html")
+
+from django.http import HttpResponse
+
+def buscar(request):
+  
+    estudiantevalido = request.GET.get('estudiantevalido', 'Desconocido')  
+    respuesta = f"{estudiantevalido} es parte de la academia"
+    return HttpResponse(respuesta)
+
+
  
